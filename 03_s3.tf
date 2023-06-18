@@ -64,13 +64,13 @@ resource "aws_s3_bucket_policy" "s3-policy" {
             "aws:SourceIp" : "${var.ip_address}/32"
           }
         },
-        # "Condition" : {
-        #   "StringNotEquals" : {
-        #     "aws:sourceVpce" : [
-        #       "${aws_vpc_endpoint.vpc-end-ponint-s3-1.id}"
-        #     ]
-        #   }
-        # }
+        "Condition" : {
+          "StringNotEquals" : {
+            "aws:sourceVpce" : [
+              "${aws_vpc_endpoint.vpc-end-ponint-s3-1.id}"
+            ]
+          }
+        }
       }
     ]
   })
