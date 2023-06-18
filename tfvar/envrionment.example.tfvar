@@ -1,4 +1,4 @@
 region=""
 bucket_name=""
 ip_address=""
-#private_vpc_cidr_1=""
+private_vpc_cidr_1=""
